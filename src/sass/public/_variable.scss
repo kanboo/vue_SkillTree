@@ -19,50 +19,6 @@ $font-size-tableInformation: 14px;
 $font-size-remark: 16px;
 $font-size-placeholder: 16px;
 
-// font family
-$font-family-title: "Helvetica-Medium;";
-$font-family-subtitle: "Helvetica-Medium;";
-$font-family-subtitle2: "Helvetica-Medium";
-$font-family-paragraph: "Helvetica-Regular";
-$font-family-remark: "Helvetica-Regular";
-$font-family-placeholder: "Helvetica-Regular";
-
 // breakpoint
 $mq-pad: 768px;
 $mq-mobile: 767px;
-
-.green {
-  color: $color-green;
-}
-
-.red {
-  color: $color-red;
-}
-
-.blue {
-  color: $color-blue;
-}
-
-.gray {
-  color: $color-gray-dark;
-}
-
-.bg-green {
-  color: $color-white;
-  background: $color-green;
-}
-
-.bg-red {
-  color: $color-white;
-  background: $color-red;
-}
-
-.bg-blue {
-  color: $color-white;
-  background: $color-blue;
-}
-
-.bg-gray {
-  color: $color-white;
-  background: $color-gray-dark;
-}

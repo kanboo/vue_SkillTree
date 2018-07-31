@@ -2,4 +2,129 @@
 @import "@/sass/public/_mixin.scss";
 
 .index {
+  position: relative;
+  width: 100%;
+  height: 1920px;
+  background-image: url("~@/assets/bg.png"),
+  linear-gradient(to bottom, #10030a, #1b0b16, #231121, #2b152d, #301a3b);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: bottom;
+
+  .header {
+    @include flex(flex-start, center);
+
+    padding-top: 36px;
+    padding-left: 120px;
+    color: #ffffff;
+
+    .logo {
+      @include size(100px);
+      @include flex(center);
+
+      position: relative;
+
+      > img {
+        width: 100%;
+      }
+
+      &:before {
+        @include size(120%);
+
+        content: "";
+        position: absolute;
+        opacity: .3;
+        border-radius: 50%;
+        background: #efbeab;
+      }
+      &:after {
+        @include size(140%);
+
+        content: "";
+        position: absolute;
+        opacity: .2;
+        border-radius: 50%;
+        background: #efbeab;
+      }
+    }
+
+    .text {
+      margin-left: 3rem;
+      text-align: center;
+      h1 {
+        font-family: "Yuanti TC";
+        font-size: 79px;
+        font-weight: bold;
+      }
+      span {
+        font-size: 69px;
+      }
+    }
+  }
+
+  .skillTree {
+    @include outline(red);
+
+    width: 100%;
+    height: 500px;
+    margin-top: 3rem;
+  }
+
+  .skillInfo {
+    // @include outline(blue);
+    @include flex(flex-start);
+
+    position: relative;
+    width: 100%;
+    // height: 400px;
+    margin-top: 3rem;
+    // margin-left: 180px;
+
+    .monocat {
+      position: relative;
+      z-index: 2;
+    }
+
+    .content {
+      @include flex(center);
+
+      position: relative;
+      z-index: 1;
+      left: -5rem;
+      width: 1100px;
+      height: 260px;
+      margin-top: 3rem;
+      padding-right: 77px;
+      border: 8px solid #0093ff;
+      border-radius: 64px;
+      background-color: #ffffff;
+
+      .icon {
+        padding-left: 4rem;
+      }
+      .text {
+        margin-left: 24px;
+        > h3 {
+          color: #505050;
+          font-size: 36px;
+        }
+        > p {
+          color: #7b7b7b;
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  .cat {
+    position: absolute;
+    bottom: 250px;
+    left: 40px;
+  }
+
+  .rocket {
+    position: absolute;
+    right: 324px;
+    bottom: 0px;
+  }
 }
