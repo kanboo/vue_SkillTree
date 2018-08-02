@@ -3,12 +3,14 @@
 
 .index {
   $skillIcon_W: (100%/18);
-  $skillIcon_H: (100%/6);
+  $skillIcon_H: 68px;
 
   position: relative;
   width: 100%;
   min-width: 1200px;
+  max-width: 1920px;
   height: 1920px;
+  margin: 0 auto;
   background-image: url("~@/assets/bg.png"),
   linear-gradient(to bottom, #10030a, #1b0b16, #231121, #2b152d, #301a3b);
   background-repeat: no-repeat;
@@ -65,8 +67,7 @@
     }
   }
   .skillTree {
-    @include outline(red);
-
+    // @include outline(red);
     position: relative;
     width: 100%;
     height: 400px;
@@ -121,30 +122,30 @@
       }
 
       &.illustration {
-        top: $skillIcon_H * .7;
-        left: $skillIcon_W * 8.3;
+        top: $skillIcon_H * .5;
+        left: $skillIcon_W * 8;
       }
       &.color {
-        top: $skillIcon_H * .7;
-        left: $skillIcon_W * 9.5;
+        top: $skillIcon_H * .5;
+        left: calc(#{$skillIcon_W * 8} + (65px + 10px));
       }
 
       &.sense {
         top: $skillIcon_H * 2.5;
-        left: $skillIcon_W * 8.3;
+        left: $skillIcon_W * 8;
       }
       &.text {
         top: $skillIcon_H * 2.5;
-        left: $skillIcon_W * 9.5;
+        left: calc(#{$skillIcon_W * 8} + (65px + 10px));
       }
 
       &.inspiration {
-        top: $skillIcon_H * 4.3;
-        left: $skillIcon_W * 8.3;
+        top: $skillIcon_H * 4.5;
+        left: $skillIcon_W * 8;
       }
       &.pictures {
-        top: $skillIcon_H * 4.3;
-        left: $skillIcon_W * 9.5;
+        top: $skillIcon_H * 4.5;
+        left: calc(#{$skillIcon_W * 8} + (65px + 10px));
       }
 
       &.axe {
@@ -171,11 +172,11 @@
       }
 
       &.timer {
-        top: $skillIcon_H * 4.3;
+        top: $skillIcon_H * 4.5;
         left: $skillIcon_W * 13.5;
       }
       &.emblem {
-        top: $skillIcon_H * 4.3;
+        top: $skillIcon_H * 4.5;
         left: $skillIcon_W * 15.5;
       }
     }
@@ -204,8 +205,6 @@
       }
 
       &.meat {
-        // top: $skillIcon_H * 1.5;
-        // left: $skillIcon_W * 3;
         &.row {
           top: calc(#{$skillIcon_H * 1.5} + 33px);
           left: calc(#{$skillIcon_W * 3} + 70px);
@@ -214,15 +213,13 @@
 
         &.col {
           // @include outline(blue);
-          top: calc(#{$skillIcon_H * 2.5});
+          top: calc(#{$skillIcon_H * 1.5} + #{$skillIcon_H * 1});
           left: calc(#{$skillIcon_W * 4} + 70px - 33px - 16px);
           width: 16px;
-          height: calc(#{$skillIcon_H * 1.5} - 33px);
+          height: calc(#{$skillIcon_H * 1} + 16px);
         }
       }
       &.shield {
-        // top: $skillIcon_H * 3.5;
-        // left: $skillIcon_W * 1;
         top: calc(#{$skillIcon_H * 3.5} + 33px);
         left: calc(#{$skillIcon_W * 1} + 70px);
         width: calc(#{$skillIcon_W * 1.5} - 90px);
@@ -239,8 +236,6 @@
         }
       }
       &.hat {
-        // top: $skillIcon_H * 3.5;
-        // left: $skillIcon_W * 2.5;
         top: calc(#{$skillIcon_H * 3.5} + 33px);
         left: calc(#{$skillIcon_W * 2.5} + 70px);
         width: calc(#{$skillIcon_W * 1.5} - 90px);
@@ -257,15 +252,12 @@
         }
       }
       &.horn {
-        // top: $skillIcon_H * 3.5;
-        // left: $skillIcon_W * 4;
-
         &.col {
           // @include outline(blue);
-          top: calc(#{$skillIcon_H * 3.5});
+          top: calc(#{$skillIcon_H * 3} + #{$skillIcon_H * .5 / 2});
           left: calc(#{$skillIcon_W * 4} + 70px - 33px - 16px);
           width: 16px;
-          height: calc(#{$skillIcon_H * 1});
+          height: calc(#{$skillIcon_H * .5});
           transform-origin: 50% 0%;
         }
       }
@@ -289,8 +281,218 @@
       }
 
       &.hammer {
-        // top: $skillIcon_H * 2.5;
-        // left: $skillIcon_W * 6;
+        &.row1 {
+          top: calc(#{$skillIcon_H * .5} + (65px / 2));
+          left: calc(#{$skillIcon_W * 6.5} + 65px + 5px);
+          width: calc(#{$skillIcon_W * 1.5} - 65px - 20px - 10px);
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            border-width: 15px 0 15px 20px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffffff;
+          }
+        }
+
+        &.row2 {
+          top: calc(#{$skillIcon_H * 2.5} + (65px / 2));
+          left: calc(#{$skillIcon_W * 6} + 65px + 5px);
+          width: calc(#{$skillIcon_W * 2} - 65px - 20px - 10px);
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            border-width: 15px 0 15px 20px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffffff;
+          }
+        }
+
+        &.row3 {
+          top: calc(#{$skillIcon_H * 4.5} + (65px / 2));
+          left: calc(#{$skillIcon_W * 6.5} + 65px + 5px);
+          width: calc(#{$skillIcon_W * 1.5} - 65px - 20px - 10px);
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            border-width: 15px 0 15px 20px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffffff;
+          }
+        }
+
+        &.col {
+          // @include outline(red);
+          top: calc(#{$skillIcon_H * 2.5} + (65px / 2));
+          left: calc(#{$skillIcon_W * 6.5} + 65px + 5px);
+          width: 16px;
+          height: calc(#{$skillIcon_H * 4} + 16px);
+        }
+      }
+
+      &.mediumUP {
+        &.row1 {
+          top: calc(#{$skillIcon_H * .5} + (65px / 2));
+          left: calc(#{$skillIcon_W * 8} + (65px + 10px) + 65px + 5px);
+          width: calc(
+          #{$skillIcon_W * 2.5} - (65px + 10px) - 65px - 20px - 10px
+          );
+        }
+
+        &.row2 {
+          top: calc(#{$skillIcon_H * 2.5} + (65px / 2));
+          left: calc(#{$skillIcon_W * 8} + (65px + 10px) + 65px + 5px);
+          width: calc(
+          #{$skillIcon_W * 3.5} - (65px + 10px) - 65px - 20px - 10px
+          );
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            border-width: 15px 0 15px 20px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffffff;
+          }
+        }
+
+        &.row3 {
+          top: calc(#{$skillIcon_H * 4.5} + (65px / 2));
+          left: calc(#{$skillIcon_W * 8} + (65px + 10px) + 65px + 5px);
+          width: calc(
+          #{$skillIcon_W * 2.5} - (65px + 10px) - 65px - 20px - 10px
+          );
+        }
+
+        &.col {
+          // @include outline(red);
+          top: calc(#{$skillIcon_H * 2.5} + (65px / 2));
+          left: calc(
+          #{$skillIcon_W * 8} + (65px + 10px) + 65px + 5px + #{$skillIcon_W * 2.5} -
+          (65px + 10px) - 65px - 20px - 10px
+          );
+          width: 16px;
+          height: calc(#{$skillIcon_H * 4} + 16px);
+        }
+      }
+
+      &.axe {
+        &.row {
+          top: calc(#{$skillIcon_H * 2.5} + (65px / 2));
+          left: calc(#{$skillIcon_W * 11.5} + 65px + 5px);
+          width: calc(#{$skillIcon_W * 2.5} - 65px - 20px - 10px);
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            border-width: 15px 0 15px 20px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffffff;
+          }
+        }
+      }
+
+      &.book {
+        &.row {
+          top: calc(#{$skillIcon_H * .5} + (65px / 2));
+          left: calc(#{$skillIcon_W * 13.5} + 65px + 20px + 5px);
+          width: calc(#{$skillIcon_W * 2} - 65px - 20px - 20px - 10px);
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            border-width: 15px 0 15px 20px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffffff;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%) rotate(180deg);
+            border-width: 15px 0 15px 20px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffffff;
+          }
+        }
+      }
+
+      &.blade2 {
+        &.row {
+          top: calc(#{$skillIcon_H * 2.5} + (65px / 2));
+          left: calc(#{$skillIcon_W * 14} + 65px + 5px);
+          width: calc(#{$skillIcon_W * 2} - 65px - 20px - 10px);
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            border-width: 15px 0 15px 20px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffffff;
+          }
+        }
+
+        &.col {
+          // @include outline(red);
+          top: calc(#{$skillIcon_H * 2.5} + (65px / 2));
+          left: calc(#{$skillIcon_W * 14.25} + 65px + 5px);
+          width: 16px;
+          height: calc(#{$skillIcon_H * 4} + 16px);
+        }
+      }
+
+      &.timer {
+        &.row {
+          top: calc(#{$skillIcon_H * 4.5} + (65px / 2));
+          left: calc(#{$skillIcon_W * 13.5} + 65px + 20px + 5px);
+          width: calc(#{$skillIcon_W * 2} - 65px - 20px - 20px - 10px);
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            border-width: 15px 0 15px 20px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffffff;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%) rotate(180deg);
+            border-width: 15px 0 15px 20px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffffff;
+          }
+        }
       }
     }
   }
@@ -339,17 +541,22 @@
         }
       }
     }
+
+    .padora {
+      position: absolute;
+      right: 10%;
+    }
   }
 
   .cat {
     position: absolute;
-    bottom: 8%;
-    left: 5%;
+    bottom: 13%;
+    left: 4%;
   }
 
   .rocket {
     position: absolute;
-    right: 3%;
+    right: 18%;
     bottom: 0px;
   }
 }
