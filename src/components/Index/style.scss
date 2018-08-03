@@ -159,7 +159,7 @@
       }
       &.quill {
         top: $skillIcon_H * .5;
-        left: $skillIcon_W * 15.5;
+        left: $skillIcon_W * 16.5;
       }
 
       &.blade2 {
@@ -177,7 +177,7 @@
       }
       &.emblem {
         top: $skillIcon_H * 4.5;
-        left: $skillIcon_W * 15.5;
+        left: $skillIcon_W * 16.5;
       }
     }
 
@@ -283,8 +283,8 @@
       &.hammer {
         &.row1 {
           top: calc(#{$skillIcon_H * .5} + (65px / 2));
-          left: calc(#{$skillIcon_W * 6.5} + 65px + 5px);
-          width: calc(#{$skillIcon_W * 1.5} - 65px - 20px - 10px);
+          left: calc(#{$skillIcon_W * 6.25} + 65px + 5px);
+          width: calc(#{$skillIcon_W * 1.75} - 65px - 20px - 10px);
 
           &::after {
             content: "";
@@ -317,8 +317,8 @@
 
         &.row3 {
           top: calc(#{$skillIcon_H * 4.5} + (65px / 2));
-          left: calc(#{$skillIcon_W * 6.5} + 65px + 5px);
-          width: calc(#{$skillIcon_W * 1.5} - 65px - 20px - 10px);
+          left: calc(#{$skillIcon_W * 6.25} + 65px + 5px);
+          width: calc(#{$skillIcon_W * 1.75} - 65px - 20px - 10px);
 
           &::after {
             content: "";
@@ -335,7 +335,7 @@
         &.col {
           // @include outline(red);
           top: calc(#{$skillIcon_H * 2.5} + (65px / 2));
-          left: calc(#{$skillIcon_W * 6.5} + 65px + 5px);
+          left: calc(#{$skillIcon_W * 6.25} + 65px + 5px);
           width: 16px;
           height: calc(#{$skillIcon_H * 4} + 16px);
         }
@@ -345,9 +345,7 @@
         &.row1 {
           top: calc(#{$skillIcon_H * .5} + (65px / 2));
           left: calc(#{$skillIcon_W * 8} + (65px + 10px) + 65px + 5px);
-          width: calc(
-          #{$skillIcon_W * 2.5} - (65px + 10px) - 65px - 20px - 10px
-          );
+          width: calc(#{$skillIcon_W * 3} - (65px + 10px) - 65px - 20px - 10px);
         }
 
         &.row2 {
@@ -372,17 +370,15 @@
         &.row3 {
           top: calc(#{$skillIcon_H * 4.5} + (65px / 2));
           left: calc(#{$skillIcon_W * 8} + (65px + 10px) + 65px + 5px);
-          width: calc(
-          #{$skillIcon_W * 2.5} - (65px + 10px) - 65px - 20px - 10px
-          );
+          width: calc(#{$skillIcon_W * 3} - (65px + 10px) - 65px - 20px - 10px);
         }
 
         &.col {
           // @include outline(red);
           top: calc(#{$skillIcon_H * 2.5} + (65px / 2));
           left: calc(
-          #{$skillIcon_W * 8} + (65px + 10px) + 65px + 5px + #{$skillIcon_W * 2.5} -
-          (65px + 10px) - 65px - 20px - 10px
+          #{$skillIcon_W * 8.5} + (65px + 10px) + 65px + 5px + #{$skillIcon_W *
+          2.5} - (65px + 10px) - 65px - 20px - 10px
           );
           width: 16px;
           height: calc(#{$skillIcon_H * 4} + 16px);
@@ -412,7 +408,7 @@
         &.row {
           top: calc(#{$skillIcon_H * .5} + (65px / 2));
           left: calc(#{$skillIcon_W * 13.5} + 65px + 20px + 5px);
-          width: calc(#{$skillIcon_W * 2} - 65px - 20px - 20px - 10px);
+          width: calc(#{$skillIcon_W * 3} - 65px - 20px - 20px - 10px);
 
           &::after {
             content: "";
@@ -469,7 +465,7 @@
         &.row {
           top: calc(#{$skillIcon_H * 4.5} + (65px / 2));
           left: calc(#{$skillIcon_W * 13.5} + 65px + 20px + 5px);
-          width: calc(#{$skillIcon_W * 2} - 65px - 20px - 20px - 10px);
+          width: calc(#{$skillIcon_W * 3} - 65px - 20px - 20px - 10px);
 
           &::after {
             content: "";
